@@ -61,101 +61,6 @@ The project ships a **5-page Streamlit web application** built for presentations
 
 > **Why Random Forest?** Highest ROC-AUC on both cross-validation and the held-out test set, with the best balance across Precision, Recall, and F1 Score.
 
----
-
-## 📁 Project Structure
-
-```
-📦 Customer-Churn-Prediction
-├── app.py                                  # Root launcher (delegates to Task---1-main/app.py)
-├── requirements.txt                        # Top-level dependencies
-├── README.md                               # This file
-│
-└── Task---1-main/
-    ├── app.py                              # ⭐ Main Streamlit Web Application (5 pages)
-    ├── train_model.py                      # ML training & pipeline serialization script
-    ├── test_prediction.py                  # Automated verification test suite
-    ├── customer_churn_data.csv             # Telco dataset (5,880 records, 21 columns)
-    ├── Customer_Churn_Classification.ipynb # Full EDA & experiment Jupyter Notebook
-    ├── requirements.txt                    # Project dependencies
-    ├── project_documentation.md           # Detailed ML workflow documentation
-    ├── models_performance_comparison.png  # Visual model benchmark chart
-    ├── Screenshot.png                      # App preview screenshot
-    └── model/
-        ├── churn_model_pipeline.joblib    # Trained champion Random Forest pipeline
-        ├── all_models.joblib              # All trained model pipelines
-        └── metadata.joblib                # Metrics, ROC points & feature importances
-```
-
----
-
-## ⚙️ Installation & Setup
-
-### Prerequisites
-- Python 3.8 or higher
-- pip
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/customer-churn-prediction.git
-cd customer-churn-prediction
-```
-
-### 2. Create a Virtual Environment (Recommended)
-
-**Windows:**
-```bash
-python -m venv venv
-.\venv\Scripts\activate
-```
-
-**macOS / Linux:**
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### 3. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## ▶️ How to Run
-
-### 🌟 Option A — Launch the Streamlit Web App (Recommended)
-```bash
-streamlit run app.py
-```
-Then open your browser at **`http://localhost:8501`**
-
----
-
-### 🔁 Option B — Retrain & Re-export Model Pipelines
-```bash
-cd Task---1-main
-python train_model.py
-```
-
----
-
-### ✅ Option C — Run Automated Verification Tests
-```bash
-cd Task---1-main
-python test_prediction.py
-```
-
----
-
-### 📓 Option D — Explore the Jupyter Notebook
-```bash
-cd Task---1-main
-jupyter notebook Customer_Churn_Classification.ipynb
-```
-
----
-
 ## 🧠 ML Pipeline Deep Dive
 
 ### 1. Data Loading & Exploration
@@ -196,25 +101,6 @@ jupyter notebook Customer_Churn_Classification.ipynb
 | **Model Persistence** | `joblib` |
 
 ---
-
-## 💡 Presentation Guide (College / Demo Sessions)
-
-| Step | Duration | Action |
-|---|---|---|
-| **1. Introduction** | ~1 min | Open **Dashboard** — explain why churn costs 5–7× more than retention |
-| **2. Live Demo** | ~2 min | Go to **Prediction Studio** → click 🔴 *Month-to-Month Fiber* for high risk, then 🟢 *Loyal Long-Term* for safe score |
-| **3. Evaluation** | ~1 min | Open **Model Comparison** — walk through ROC curves, Confusion Matrix, and Feature Importances |
-| **4. Theory Q&A** | ~1 min | Navigate to **ML Concepts** — answer examiner questions on `OneHotEncoder`, `StandardScaler`, and precision/recall trade-offs |
-
----
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
----
-
-<div align="center">
 
 Made with ❤️ for AI & Data Science
 
