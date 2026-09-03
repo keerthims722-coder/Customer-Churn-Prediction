@@ -29,8 +29,6 @@ EDA → ColumnTransformer Preprocessing → Stratified K-Fold CV → Multi-Model
       (OneHotEncoder + StandardScaler)
 ```
 
----
-
 ## 🖥️ Interactive Streamlit Web App
 
 The project ships a **5-page Streamlit web application** built for presentations, executive dashboards, and real-time customer risk scoring:
@@ -101,7 +99,4 @@ The project ships a **5-page Streamlit web application** built for presentations
 | **Model Persistence** | `joblib` |
 
 ---
-
-Made with ❤️ for AI & Data Science
-
 </div>
